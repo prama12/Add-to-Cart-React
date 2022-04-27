@@ -29,9 +29,17 @@ const MainCart = () => {
           return dispatch({ type: "CLEAR_CART" });
      }
 
+     //increment item number
+     const increment = (id) => {
+          return dispatch({
+               type: "INCREMENT",
+               payload: id,
+          })
+     }
+
      return (
           <>
-               <CartContext.Provider value={{ ...state, removeItem, clearCart }}>
+               <CartContext.Provider value={{ ...state, removeItem, clearCart, increment }}>
                     <Cart />
                </CartContext.Provider>
           </>

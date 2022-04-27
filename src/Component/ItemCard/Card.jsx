@@ -3,7 +3,7 @@ import { CartContext } from '../MainCart'
 
 const Card = ({ id, name, description, price, img, amount }) => {
 
-     const { removeItem } = useContext(CartContext)
+     const { removeItem, increment } = useContext(CartContext)
 
      return (
           <>
@@ -41,7 +41,7 @@ const Card = ({ id, name, description, price, img, amount }) => {
                          </p>
                          <p className='border border-black h-6 w-10 flex items-center justify-center rounded-sm'>{amount}</p>
                          <p>
-                              <button className='rounded-full flex items-center justify-center w-5 h-5 hover:bg-slate-300'>
+                              <button className='rounded-full flex items-center justify-center w-5 h-5 hover:bg-slate-300' onClick={() => increment(id)}>
                                    <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         ariaHidden="true" role="img"

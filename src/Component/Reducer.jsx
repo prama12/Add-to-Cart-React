@@ -15,5 +15,16 @@ export const reducer = (state, action) => {
           return { ...state, item: [] };
      }
 
+     //Increment cart item
+     if (action.type === "INCREMENT") {
+          let updateCart = state.item.map((curElem) => {
+               if (curElem.id === action.payload) {
+                    return { ...curElem, amount: curElem.amount + 1 };
+               }
+               return curElem;
+          });
+          return { ...state, item: updateCart }
+     }
+
      return state;
 };
