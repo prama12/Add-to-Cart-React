@@ -26,5 +26,20 @@ export const reducer = (state, action) => {
           return { ...state, item: updateCart }
      }
 
+     //Decrement cart item
+     if (action.type === "DECREMENT") {
+          let updateCart = state.item.map((curElem) => {
+               if (curElem.id === action.payload) {
+                    return { ...curElem, amount: curElem.amount - 1 };
+               }
+               return curElem;
+          })
+               .filter((curElem) => {
+                    return curElem.amount !== 0;
+               });
+
+          return { ...state, item: updateCart }
+     }
+
      return state;
 };
