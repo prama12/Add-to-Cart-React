@@ -9,7 +9,7 @@ const Header = () => {
      return (
           <>
                <div className='flex items-center justify-between'>
-                    <div className='flex gap-5 items-center py-3 px-1 cursor-pointer'>
+                    <div className='flex gap-5 items-center pb-3 px-1 cursor-pointer'>
                          <div>
                               <svg
                                    className='h-10 w-6' xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">

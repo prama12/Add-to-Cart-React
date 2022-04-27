@@ -14,10 +14,10 @@ const Cart = () => {
 
                          <Header />
 
-                         <div className='h-0.5 w-full bg-gray-600 rounded-full mb-10'></div>
+                         <div className='h-0.5 w-full bg-gray-600 rounded-full mb-5'></div>
                          <div className='mb-5'>
-                              <h1 className='font-bold text-2xl '>Shopping Cart</h1>
-                              <p className='font-medium text-md'>
+                              <h1 className='font-bold text-xl '>Shopping Cart</h1>
+                              <p className='font-medium text-sm'>
                                    You Have <span className='font-bold'>{totalItem}</span> Items In Shopping Cart
                               </p>
                          </div>
@@ -34,7 +34,7 @@ const Cart = () => {
           <>
                <div className='bg-white m-2 px-10 py-5 h-full'>
                     <Header />
-                    <div className='h-0.5 w-full bg-gray-600 rounded-full mb-10'></div>
+                    <div className='h-0.5 w-full bg-gray-600 rounded-full mb-5'></div>
                     <div className='mb-5'>
                          <h1 className='font-bold text-2xl '>Shopping Cart</h1>
                          <p className='font-medium text-md'>
