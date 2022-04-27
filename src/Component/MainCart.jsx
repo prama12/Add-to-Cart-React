@@ -15,9 +15,18 @@ const initialState = {
 const MainCart = () => {
 
      const [state, dispatch] = useReducer(reducer, initialState)
+
+     //to delete the indv. element from a card.
+     const removeItem = (id) => {
+          return dispatch({
+               type: "REMOVE_ITEM",
+               payload: id,
+          });
+     };
+
      return (
           <>
-               <CartContext.Provider value={{ ...state }}>
+               <CartContext.Provider value={{ ...state, removeItem }}>
                     <Cart />
                </CartContext.Provider>
           </>

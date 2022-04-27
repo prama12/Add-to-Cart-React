@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../MainCart'
 
 const Card = ({ id, name, description, price, img, amount }) => {
+
+     const { removeItem } = useContext(CartContext)
+
      return (
           <>
                <div className='grid md:grid-cols-5 grid-cols-1 gap-5 md:gap-2 lg:gap-3 px-2 relative '>
@@ -61,7 +65,7 @@ const Card = ({ id, name, description, price, img, amount }) => {
                     <div className='flex items-center justify-end md:relative absolute top-[-30px] md:top-0 md:right-0 right-[-8px] font-medium text-lg'>
                          <button
                               className='rounded-full flex items-center justify-center w-6 h-6 hover:bg-slate-300'
-
+                              onClick={() => removeItem(id)}
                          >
                               <svg
                                    xmlns="http://www.w3.org/2000/svg"
