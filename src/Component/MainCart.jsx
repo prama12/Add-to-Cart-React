@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer, useEffect } from 'react'
 import Cart from './Layout/Cart'
 import { reducer } from './Reducer';
 import Sdata from './Data-API/Products';
@@ -44,6 +44,11 @@ const MainCart = () => {
                payload: id,
           })
      }
+
+     //use useEffect to update data
+     useEffect(() => {
+          dispatch({ type: "GET_TOTAL" })
+     }, [state.item]);
 
      return (
           <>

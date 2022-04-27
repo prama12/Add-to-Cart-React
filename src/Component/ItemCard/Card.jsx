@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../MainCart'
 
+
 const Card = ({ id, name, description, price, img, amount }) => {
 
      const { removeItem, increment, decrement } = useContext(CartContext)

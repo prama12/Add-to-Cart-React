@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../MainCart'
+
 
 const Header = () => {
+
+     const { totalItem } = useContext(CartContext)
+
      return (
           <>
                <div className='flex items-center justify-between'>
@@ -35,7 +40,7 @@ const Header = () => {
                                    d="M3 6h19l-3 10H6L3 6Zm0 0l-.75-2.5M9.992 11h2m2 0h-2m0 0V9m0 2v2M11 19.5a1.5 1.5 0 0 1-3 0m9 0a1.5 1.5 0 0 1-3 0"
                               />
                          </svg>
-                         <p className='w-4 h-4 rounded-full bg-blue-700 text-white shadow-sm flex items-center justify-center text-xs absolute top-9 right-10'>3</p>
+                         <p className='w-6 h-6 rounded-full bg-blue-700 text-white shadow-sm flex items-center justify-center text-xs absolute top-9 right-9'>{ totalItem}</p>
                     </div>
                </div>
           </>
