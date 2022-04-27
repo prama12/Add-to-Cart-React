@@ -10,5 +10,10 @@ export const reducer = (state, action) => {
           }
      }
 
+     //Clear All data From Card
+     if (action.type === "CLEAR_CART") {
+          return { ...state, item: [] };
+     }
+
      return state;
 };

@@ -5,7 +5,7 @@ import { CartContext } from '../MainCart'
 
 
 const Cart = () => {
-     const { item } = useContext(CartContext)
+     const { item, clearCart } = useContext(CartContext)
 
      return (
           <>
@@ -38,7 +38,7 @@ const Cart = () => {
                               <h1 className=' font-medium text-xl'>Cart Total : <span className=' font-bold'>Rs.12000</span></h1>
                               <div className='flex gap-3'>
                                    <button className='bg-blue-700 text-white flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800'>Checkout</button>
-                                   <button className='bg-red-600 text-white flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700'>Clear All</button>
+                                   <button className='bg-red-600 text-white flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700' onClick={clearCart}>Clear All</button>
                               </div>
                          </div>
                     </div>
