@@ -1,3 +1,5 @@
+
+
 export const reducer = (state, action) => {
 
      //Remove Item For individual data from card
@@ -42,21 +44,25 @@ export const reducer = (state, action) => {
      }
 
 
-     // Update cart amount with totalitem
+     // Update cart amount with totalItem and totalAmount
      if (action.type === "GET_TOTAL") {
-          let { totalItem } = state.item.reduce(
+          let { totalItem, totalAmount, eachUpdateAmount } = state.item.reduce(
                (accum, curVal) => {
-                    let { amount } = curVal;
+                    let { price, amount } = curVal;
+
+                    let updateTotalAmount = price * amount;
+                    accum.totalAmount += updateTotalAmount;
+
                     accum.totalItem += amount;
                     return accum;
                },
 
                {
                     totalItem: 0,
+                    totalAmount: 0,
                }
           );
-          return { ...state, totalItem };
+          return { ...state, totalItem, totalAmount };
      }
-
      return state;
 };

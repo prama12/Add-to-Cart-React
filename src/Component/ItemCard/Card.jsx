@@ -23,7 +23,7 @@ const Card = ({ id, name, description, price, img, amount }) => {
                          </div>
                     </div>
 
-                    <div className='flex gap-2 items-center justify-center font-medium text-lg'>
+                    <div className='flex gap-2 items-center justify-end font-medium text-lg'>
                          <p>
                               <button className='rounded-full flex items-center justify-center w-5 h-5 hover:bg-slate-300' onClick={() => decrement(id)} >
                                    <svg
@@ -61,7 +61,12 @@ const Card = ({ id, name, description, price, img, amount }) => {
                          </p>
                     </div>
 
-                    <div className='flex items-center md:justify-end justify-center font-semibold text-lg'>{price}</div>
+                    <div className='flex items-center md:justify-end justify-center'>
+                         <div className='flex flex-col items-center justify-center'>
+                              <h1 className='font-semibold text-lg'>{price}</h1>
+                         </div>
+                    </div>
+
 
                     <div className='flex items-center justify-end md:relative absolute top-[-30px] md:top-0 md:right-0 right-[-8px] font-medium text-lg'>
                          <button

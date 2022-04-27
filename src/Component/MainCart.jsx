@@ -7,7 +7,7 @@ export const CartContext = createContext()
 
 const initialState = {
      item: Sdata,
-     totalamount: 0,
+     totalAmount: 0,
      totalItem: 0,
 
 };
