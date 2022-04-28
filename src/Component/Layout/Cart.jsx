@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Card from '../ItemCard/Card'
 import Header from './Header'
 import { CartContext } from '../MainCart'
+import Scrollbars from 'react-custom-scrollbars-2'
 
 
 const Cart = () => {
@@ -22,7 +23,7 @@ const Cart = () => {
                               </p>
                          </div>
 
-                         <div className='w-full h-[400px] bg-gray-100 shadow-md rounded-md px-10 py-5 overflow-y-auto flex  justify-center items-center relative'>
+                         <div className='w-full h-[400px] bg-gray-100 shadow-md rounded-md px-10 py-5  flex  justify-center items-center relative'>
                               <h1 className='font-bold text-lg text-blue-600'> You have no item in your cart. Please Continue Shopping.</h1>
                          </div>
                     </div>
@@ -42,18 +43,21 @@ const Cart = () => {
                          </p>
                     </div>
 
-                    <div className='w-full h-[400px] bg-gray-100 shadow-md rounded-md px-10 py-5 overflow-y-auto relative'>
-                         <div className='grid grid-cols-1 gap-10 pt-5'>
-                              {item.map((val, index) => {
-                                   console.log(index)
-                                   return (
-                                        <Card
-                                             key={val.id}
-                                             {...val}
-                                        />
-                                   )
-                              })}
-                         </div>
+                    <div className='w-full h-[400px] bg-gray-100 shadow-md rounded-md px-5 md:px-10 py-5 '>
+                         <Scrollbars>
+                              <div className='h-full grid grid-cols-1 gap-10 pt-5 relative'>
+
+                                   {item.map((val, index) => {
+                                        console.log(index)
+                                        return (
+                                             <Card
+                                                  key={val.id}
+                                                  {...val}
+                                             />
+                                        )
+                                   })}
+                              </div>
+                         </Scrollbars>
                     </div>
 
                     <div className='w-full mt-5'>
