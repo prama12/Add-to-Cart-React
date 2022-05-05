@@ -43,9 +43,9 @@ const Cart = () => {
                          </p>
                     </div>
 
-                    <div className='w-full h-[400px] bg-gray-100 shadow-md rounded-md px-5 md:px-10 py-5 '>
+                    <div className='w-full h-[600px] md:h-[400px] bg-gray-100 shadow-md rounded-md px-5 md:px-10 py-5 '>
                          <Scrollbars>
-                              <div className='h-full grid grid-cols-1 gap-10 pt-5 relative'>
+                              <div className='h-full grid grid-cols-1 gap-10 pt-10 relative'>
 
                                    {item.map((val, index) => {
                                         console.log(index)

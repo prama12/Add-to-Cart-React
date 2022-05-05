@@ -11,8 +11,8 @@ const Card = ({ id, name, description, price, img, amount }) => {
                <div className='grid md:grid-cols-5 grid-cols-1 gap-5 md:gap-2 lg:gap-3 px-2 relative '>
 
                     <div className='flex items-center justify-center md:justify-start'>
-                         <div className='w-24 h-28 bg-black rounded-md overflow-hidden'>
-                              <img src={img} className="w-24 h-28" alt="photo" />
+                         <div className='w-80 md:w-24 bg-black rounded-md overflow-hidden'>
+                              <img src={img} className=" w-80 md:w-24 " alt="photo" />
                          </div>
                     </div>
 
